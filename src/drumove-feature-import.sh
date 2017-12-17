@@ -11,13 +11,14 @@ else
   if [[ ! -f "./drush" ]]
   then
     echo "Cannot find drush, I'm downloading it..."
-    wget https://github.com/drush-ops/drush/releases/download/8.1.15/drush.phar
+    wget -q https://github.com/drush-ops/drush/releases/download/8.1.15/drush.phar
     chmod +x drush.phar
     mv drush.phar drush
+    echo "Downloaded"
   fi
   echo "Importing $feature.tar.gz"
   echo ""
-  tar xvf $feature.tar.gz
+  tar xvf $feature.tar.gz -C modules/custom/
   echo ""
   echo "$feature imported."
   echo "Enabling $feature..."
