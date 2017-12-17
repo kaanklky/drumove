@@ -18,7 +18,7 @@ else
   fi
   echo "Importing $feature.tar.gz"
   echo ""
-  tar xvf $feature.tar.gz -C modules/custom/
+  tar xvf $feature.tar.gz
   echo ""
   echo "$feature imported."
   echo "Enabling $feature..."
